@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="test, site, website">
+    <meta name="description" content="Этот сайт является пробным сайтом">
+    <link href="{% static 'CSS/style.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'IMG/favicon.ico' %}" rel="shortcut icon" type="image/x-icon">
+    <title>{% block title %}Default title{% endblock title %}</title>
+</head>
+<body>
+<div id="page-wrap">
+    {% include "header.html" %}
+    <div class="clear"><br/></div>
+    <center>
+        <div id="menu">
+ {% block header %}Default header{% endblock header %}
+            <hr>
+        </div>
+        {% block content %} Test {% endblock content %}
+</main>
+        <a href=""></a>
+    </center>
+</div>
+{% include "footer.html" %}
+</body>
+</html>
+
+</body>
+</html>
+

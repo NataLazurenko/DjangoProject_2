@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+{% extends "base.html" %}
 {% load static %}
+{% block header %} Страница товара {% endblock header %}
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
@@ -21,7 +23,9 @@
 <body>
 <h1> Страница товара </h1>
 Название: {{ item.name }} <br>
-Количество: {{ item.count }} <br>
+Бренд: {{ item.brand }} <br>
+Количество: {{ item.count|default:"Товар отсутствует" }} <br>
+Описание: {{ item.description }} <br>
 <a href="/items_list"> Назад </a>
 </body>
 </html>
